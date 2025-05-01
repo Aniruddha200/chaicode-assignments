@@ -1,5 +1,4 @@
 class tokenizer:
-
     def encoder(self, text: str):
         words = text.split()
         tokens = []
@@ -9,6 +8,7 @@ class tokenizer:
                 sub_tokens.append(ord(char))
             tokens.append(sub_tokens)
         return tokens
+
     def decoder(self, token_list: list):
         decoded_text = ""
         for sub_tokens in token_list:
@@ -16,7 +16,6 @@ class tokenizer:
                 decoded_text += chr(token)
             decoded_text += " "
         return decoded_text.strip()
-
 
 if __name__ == "__main__":
     tokenizer = tokenizer()
@@ -33,3 +32,4 @@ if __name__ == "__main__":
     print("encoded_tokens:", generated_tokens)
     output_text = tokenizer.decoder(generated_tokens)
     print("decoded text:", output_text)
+    
