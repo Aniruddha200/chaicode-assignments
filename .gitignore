@@ -1,0 +1,5 @@
+# Dependency directories
+venv/
+
+#Environment Variables
+.env
